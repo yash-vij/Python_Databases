@@ -1,5 +1,4 @@
 import pandas as pd
-import pymysql
 import mysql.connector as conn
 
 mydb = conn.connect(host="localhost", user="root", passwd="0000")
@@ -9,6 +8,7 @@ cursor = mydb.cursor()
 cursor.execute("create database if not exists iNeuron")
 cursor.execute("use iNeuron")
 df = pd.read_csv("bank/bank.csv",sep = ";")
+df = df[0:10]
 print(df.columns)
 cols = "`,`".join([str(i) for i in df.columns.tolist()])
 
