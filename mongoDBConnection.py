@@ -12,3 +12,5 @@ data = {
 db1 = client['Mongotest11']
 collection1 = db1['coll1']
 collection1.insert_one(data)
+
+
