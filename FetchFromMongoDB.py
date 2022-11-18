@@ -8,6 +8,7 @@ collectionsMultiple = db1['CollectionMultipleData']
 
 data_find = collectionsMultiple.find({
     'age':{"$gt":20}
+
 })
 
 
